@@ -55,8 +55,6 @@ set SAVEDIR=%CD%
 %0\
 cd %0\..\.. 
 set BASEDIR=%CD%
-
-echo BASEDIR
 cd %SAVEDIR%
 set SAVE_DIR=
 goto repoSetup
@@ -78,7 +76,7 @@ goto endInit
 @REM Reaching here means variables are defined and arguments have been captured
 :endInit
 
-%JAVACMD% %JAVA_OPTS% %EXTRA_JVM_ARGUMENTS% -classpath %CLASSPATH_PREFIX%;%CLASSPATH% -Dapp.name="testsocket" -Dapp.repo="%REPO%" -Dbasedir="%BASEDIR%" launch.TMain %CMD_LINE_ARGS%
+%JAVACMD% %JAVA_OPTS% %EXTRA_JVM_ARGUMENTS% -classpath %CLASSPATH_PREFIX%;%CLASSPATH% -Dapp.name="testsocket" -Dapp.repo="%REPO%" -Dbasedir="%BASEDIR%" launch.Main %CMD_LINE_ARGS%
 if ERRORLEVEL 1 goto error
 goto end
 

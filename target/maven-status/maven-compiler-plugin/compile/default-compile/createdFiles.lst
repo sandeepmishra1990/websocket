@@ -1,4 +1,4 @@
-launch\TMain.class
+launch\Main.class
 com\org\CustomEndPoint.class
 com\org\CustomEndPoint$1.class
 com\org\cont.class

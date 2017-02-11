@@ -125,7 +125,7 @@
                 <assembleDirectory>target</assembleDirectory>
                 <programs>
                     <program>
-                        <mainClass>launch.TMain</mainClass>
+                        <mainClass>launch.Main</mainClass>
                         <name>testsocket</name>
                     </program>
                 </programs>
