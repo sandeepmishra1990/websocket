@@ -39,7 +39,7 @@ public class 	Main {
         File root = getRootFolder();
         System.setProperty("org.apache.catalina.startup.EXIT_ON_INIT_FAILURE", "true");
         Tomcat tomcat = new Tomcat();
-        Path tempPath = Files.createTempDirectory("tomcat-base-dir", null);
+        Path tempPath = Files.createTempDirectory("tomcat-base-dir");
         tomcat.setBaseDir(tempPath.toString());
         
         //The port that we should run on can be set into an environment variable
@@ -52,7 +52,7 @@ public class 	Main {
         tomcat.setPort(Integer.parseInt(webPort));
         File webContentFolder = new File(root.getAbsolutePath(), "src/main/webapp/");
         if (!webContentFolder.exists()) {
-            webContentFolder = Files.createTempDirectory("default-doc-base", null).toFile();
+            webContentFolder = Files.createTempDirectory("default-doc-base").toFile();
         }
         StandardContext ctx = (StandardContext) tomcat.addWebapp("", webContentFolder.getAbsolutePath());
         //Set execution independent of current thread context classloader (compatibility with exec:java mojo)
