@@ -1,4 +1,4 @@
-package launch;
+/*package launch;
 
 import javax.websocket.server.ServerContainer;
 
@@ -8,7 +8,7 @@ import org.eclipse.jetty.servlet.ServletContextHandler;
 import org.eclipse.jetty.websocket.jsr356.server.deploy.WebSocketServerContainerInitializer;
 
 import com.org.CustomEndPoint;
-import com.org.EventSocket;
+
 
 public class Main {
 
@@ -42,4 +42,4 @@ public class Main {
             t.printStackTrace(System.err);
         }
     }
-}
+}*/

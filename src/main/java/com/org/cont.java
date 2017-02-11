@@ -6,7 +6,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.websocket.server.ServerEndpointConfig;
+
 
 /**
  * Servlet implementation class cont
@@ -29,7 +29,7 @@ public class cont extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		response.getWriter().append("Served at: ").append(request.getContextPath());
-		ServerEndpointConfig.Builder.create(CustomEndPoint.class, "/ratesrv").build();
+		//ServerEndpointConfig.Builder.create(CustomEndPoint.class, "/ratesrv").build();
 		System.out.println("sss");
 	}
 
