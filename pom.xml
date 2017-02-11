@@ -119,7 +119,7 @@
                 <assembleDirectory>target</assembleDirectory>
                 <programs>
                     <program>
-                        <mainClass>launch.Main</mainClass>
+                        <mainClass>launch.TMain</mainClass>
                         <name>target</name>
                     </program>
                 </programs>
