@@ -1,4 +1,4 @@
-package launch;
+/*package launch;
 
 import java.io.File;
 import java.net.URISyntaxException;
@@ -85,4 +85,4 @@ public class 	Main {
         tomcat.start();
         tomcat.getServer().await();
     }
-}
+}*/

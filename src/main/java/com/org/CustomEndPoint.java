@@ -19,7 +19,7 @@ public class CustomEndPoint {
     while(true)
     {
      double d=2+Math.random();     
-     if(queue!=null)
+     if(queue!=null && queue.size()!=0)
       sendAll("USD Rate: "+df.format(d));    
      try {
       sleep(2000);
@@ -56,7 +56,7 @@ public class CustomEndPoint {
  }
  private static void sendAll(String msg) {
   try {
-   /* Send the new rate to all open WebSocket sessions */  
+   // Send the new rate to all open WebSocket sessions   
    ArrayList<Session > closedSessions= new ArrayList<Session>();
    for (Session session : queue) {
     if(!session.isOpen())
