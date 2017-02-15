@@ -12,7 +12,7 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script>
 	var wsocket;
-	var serviceLocation = "wss:////websocket1990.herokuapp.com/chatwithme/";
+	var serviceLocation = "wss://websocket1990.herokuapp.com/chatwithme/";
 	var $nickName;
 	var $message;
 	var $chatWindow;
@@ -59,7 +59,7 @@
 		$('#enterRoom').click(function(evt) {
 			evt.preventDefault();
 			connectToChatserver();
-			$('.chat-wrapper h2').text('Chat # '+$nickName.val() + "@" + room);
+			$('.chat-wrapper h3').text($nickName.val() + "@ " + room);
 			$('.chat-signin').hide();
 			$('.chat-wrapper').show();
 			$message.focus();
@@ -86,30 +86,38 @@
 			<div class="btn-group">
 				<label for="chatroom">Chatroom</label> <select size="1"
 					id="chatroom">
-					<option>arduino</option>
-					<option>java</option>
-					<option>groovy</option>
-					<option>scala</option>
+					<option>Neutral room</option>
+					<option>Fight room</option>
+					<option>Love room</option>
+					
 				</select>
 			</div>
 			<button class="btn btn-large btn-primary" type="submit"
-				id="enterRoom">Sign in</button>
+				id="enterRoom">Go</button>
 		</form>
 	</div>
 	<!-- /container -->
  
 	<div class="container chat-wrapper">
 		<form id="do-chat">
-			<h2 class="alert alert-success"></h2>
+			<h3 class="alert alert-success"></h3>
+			<div class="panel panel-info">
+      <div class="panel-heading">Chat Box</div>
+      <div class="panel-body">
+    
 			<table id="response" class="table table-bordered"></table>
+			</div>
+			</div>
 			<fieldset>
 				<legend>Enter your message..</legend>
 				<div class="controls">
-					<input type="text" class="input-block-level" placeholder="Your message..." id="message" style="height:60px"/>
+					<input type="text" class="input-block-level" placeholder="Your message..." id="message" autocomplete="off" 
+
+style="height:60px"/>
 					<input type="submit" class="btn btn-large btn-block btn-primary"
 						value="Send message" />
-					<button class="btn btn-large btn-block" type="button" id="leave-room">Leave
-						room</button>
+					<button class="btn btn-large btn-block" type="button" id="leave-room">Exit
+					</button>
 				</div>
 			</fieldset>
 		</form>
