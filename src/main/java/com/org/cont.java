@@ -1,11 +1,14 @@
 package com.org;
 
 import java.io.IOException;
+
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 
 /**
@@ -14,7 +17,7 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet("/cont")
 public class cont extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
+    
     /**
      * @see HttpServlet#HttpServlet()
      */
@@ -31,6 +34,10 @@ public class cont extends HttpServlet {
 		response.getWriter().append("Served at: ").append(request.getContextPath());
 		//ServerEndpointConfig.Builder.create(CustomEndPoint.class, "/ratesrv").build();
 		System.out.println("sss");
+		/*HttpSession session=request.getSession();  
+        session.setAttribute("name","active");  
+        System.out.println("session created");*/
+        request.getRequestDispatcher("WEB-INF/index.jsp").forward(request,response);
 	}
 
 	/**

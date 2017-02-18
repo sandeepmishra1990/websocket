@@ -19,7 +19,7 @@
 
 <script>
 	var wsocket;
-	var serviceLocation = "wss://websocket1990.herokuapp.com/chatwithme/";
+	var serviceLocation = "ws://localhost:8080/testsocket/chatwithme/";
 	var $nickName;
 	var $message;
 	var $chatWindow;
